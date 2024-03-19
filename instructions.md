@@ -96,7 +96,7 @@ This route expects a movie ID in the URL and is responsible for showing more det
 
 - Your app should have at least two pages - one showing a list of movies and one showing details
 - You should follow the design from our example (but it's ok to change things - just try to make it look nice).
-- Adapting to the different viewports
+- Make your app responsive (it should look good on devices from 320px width up to 1600px)
 
 
 ## Stretch Goals
