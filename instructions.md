@@ -93,11 +93,14 @@ _Route: `/movies/:id`, component: `Detail`_
 This route expects a movie ID in the URL and is responsible for showing more details about a movie after you click on it. It uses `useParams` from `react-router-dom` to get the `id` from the URL and then passes that into an API call (within `useEffect`) to themoviedb.org to fetch details about a single movie, then puts the response into state using `useState` and finally renders it onto the page.
 
 ## Requirements
-
 - Your app should have at least two pages - one showing a list of movies and one showing details
 - You should follow the design from our example (but it's ok to change things - just try to make it look nice)
 - Make your app responsive (it should look good on devices from 320px width up to 1600px)
-- Your project should be following accessibility guidelines to ensure your website is usable by a diverse range of users
+- Your project should be following accessibility guidelines to ensure your website is usable by a diverse range of users:
+  - You should have a score of at least 95 in Lighthouse
+  - All images should have alt attributes and proper sizes
+  - All contrasts should be OK
+- Follow the guidelines on how to write clean code
 
 ## Stretch Goals
 
