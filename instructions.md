@@ -8,7 +8,7 @@ This time, rather than following designs from a set of images, we'd like you to 
 
  <img src="/src/assets/finished-version.png" alt="Project Example">
 
-   <a href="https://technigo-movies-project.netlify.com/">
+   <a href="https://technigo-movies-project.netlify.app/">
     Click here to view sample of this project
   </a>
 
