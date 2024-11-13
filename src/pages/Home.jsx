@@ -1,4 +1,4 @@
-import ApiFetcher from "./ApiFetcher"; // Import ApiFetcher component
+import ApiFetcher from "../data/ApiFetcher" // Import ApiFetcher component
 
 function Home() {
   return (
