@@ -1,4 +1,4 @@
-// // This code is based on the example from the TMDB API for fetching popular movies.
+// This code is based on the example from the TMDB API for fetching popular movies.
 // It sends a GET request to the TMDB API and includes the required headers, such as the Authorization token. 
 // The response is logged to the console or an error message is displayed if the request fails.
 //
