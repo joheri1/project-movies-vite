@@ -28,7 +28,11 @@ npm run build
 
 ### The Problem
 1. Deploying to Netlify.  
-In this project, I stored the API token used to fetch data from TMDB in a .env file for security reasons, and the file is added to .gitignore to prevent it from being pushed to GitHub. When deploying the app on Netlify, environment variables from .env files are not automatically transferred, so the data from the TMDB database couldn't be fetched.   To resolve this, the API token was manually added to Netlify's environment variables under Site Configureation > Environment variables > Environment variables. The API token is available in production without being exposeds in the code.
+In this project, I stored the API token used to fetch data from TMDB in a .env file for security reasons, and the file is added to .gitignore to prevent it from being pushed to GitHub. When deploying the app on Netlify, environment variables from .env files are not automatically transferred, so the data from the TMDB database couldn't be fetched.   To resolve this, the API token was manually added to Netlify's environment variables under Site Configureation > Environment variables > Environment variables. The API token is available in production without being exposeds in the code.  
+2. Default and named exports  
+I mixed them up a few times, and tried to import default exports as named.   
+3. Renaming components  
+Initially, I named the appRoutes file as AppRoutes.jsx, assuming it was a React component. Later, I learned that it’s not a component but a JavaScript file so it should follow camelCase naming (appRoutes). When I attempted to rename the file from AppRoutes.jsx to appRoutes.jsx, I encountered issues that I couldn't resolve myself, so I used ChatGPT which suggested a temporarily renaming the file to something entirely different (like RoutesTemp.jsx) before renaming it back to appRoutes.jsx. This solved the issue.
 
 ### View it live
 [Project Movie Router](https://project-movie-router.netlify.app/)
