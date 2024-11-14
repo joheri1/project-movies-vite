@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import MovieList from "../pages/MovieList";
 
 export const ApiFetcherKey = () => {
-  //State to store the list of fetched movies
+  //useState to store all movies
   const [movies, setMovies] = useState([]);
 
   //useEffect hook to fetch popular movies when component mounts
@@ -15,7 +15,7 @@ export const ApiFetcherKey = () => {
   useEffect(() => {
     const apiKey = import.meta.env.VITE_REACT_APP_MOVIE_API_KEY;
 
-    // Function to fetch movies
+    // Fetch popular movies 
 
     const fetchMovies = async () => {
       try {
@@ -41,8 +41,9 @@ export const ApiFetcherKey = () => {
     };
 
     fetchMovies();
-  // Only run fetchMovies once when the component mounts
-  }, []); 
+  }, []); //Empty dependency array ( [] ) to ensure the fetch only runs once.
+
+  // Return popular movies 
 
   return (
     <div>

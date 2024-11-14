@@ -14,6 +14,7 @@ const ApiFetcherToken = () => {
   //useState to store all movies
   const [movies, setMovies] = useState([]);
 
+  //useEffect hook to fetch popular movies when component mounts
   useEffect(() => {
     const options = {
       method: 'GET',
