@@ -1,4 +1,4 @@
-// This component fetches popular movies from the TMDB API using an API key stored in an environment variable (`VITE_REACT_APP_MOVIE_API_KEY`).
+// This component fetches Christmas movies from the TMDB API using an API key stored in an environment variable (`VITE_REACT_APP_MOVIE_API_KEY`).
 // The API key is accessed via `import.meta.env` to avoid hardcoding it.
 // The component uses the `useState` hook to store the fetched movie list, and `useEffect` to perform the API call only once on component mount.
 // If the request is successful, the movie data is stored in the `movies` state and displayed via the `MovieList` component. Errors during the fetch are logged to the console.
@@ -15,13 +15,13 @@ export const ApiFetcherKey = () => {
   useEffect(() => {
     const apiKey = import.meta.env.VITE_REACT_APP_MOVIE_API_KEY;
 
-    // Fetch popular movies 
+    // Fetch C movies 
 
     const fetchMovies = async () => {
       try {
         // API Call to fetch popular movies data
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
+          `https://api.themoviedb.org/3/search/movie?query=Christmas&language=en-US&api_key=${apiKey}`
         );
 
         // Check if response is successful; throw an error if not
@@ -32,10 +32,15 @@ export const ApiFetcherKey = () => {
         // Fetch JSON data and set it to the movies state
         const json = await response.json();
 
-        setMovies(json.results);
-      } catch (error) {
+        // Sort movies by popularity in descending order
+        
+        const sortedMovies = json.results.sort((a, b) => b.popularity - a.popularity);
+        
+        // Set sorted movies to state
+        setMovies(sortedMovies);
 
-        // Log any errors during fetching
+      } catch (error) {
+      // Log any errors during fetching
         console.log("Error fetching data", error);
       }
     };
@@ -47,7 +52,7 @@ export const ApiFetcherKey = () => {
 
   return (
     <div>
-      <p>Fetching popular movies...</p>
+      <p>Fetching Christmas movies...</p>
       <MovieList movies={movies} />
     </div>
   );

@@ -24,7 +24,8 @@ npm run build
 ```
 
 ### Useful sources 
-- [Article about the Environment variable that I used for my API token](https://medium.com/@bhaskarkumar.india/leveraging-vites-environment-variables-for-secure-api-key-management-dd533849a5b8)
+- [Article about the Environment variable that I used for my API token](https://medium.com/@bhaskarkumar.india/leveraging-vites-environment-variables-for-secure-api-key-management-dd533849a5b8)  
+- [Sorting from the previous project Library](https://github.com/joheri1?tab=repositories#:~:text=Star-,project%2Dlibrary,-Public)
 
 ### The Problem
 1. Deploying to Netlify.  
