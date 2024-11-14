@@ -22,7 +22,7 @@ const ApiFetcherToken = () => {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        /*Authorization: `Bearer ${VITE_REACT_APP_MOVIE_API}`*/
+        Authorization: `Bearer ${import.meta.env.VITE_REACT_APP_MOVIE_API}`
       }
     };
 
