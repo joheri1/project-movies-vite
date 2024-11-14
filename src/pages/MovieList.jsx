@@ -9,11 +9,17 @@
  * 
  * */
 
+import Image from "../components/Image";
+
 const MovieList = ({ movies }) => {
   return (
     <ul>
       {movies.map((movie) => (
-        <li key={movie.id}>{movie.original_title}</li>
+        <li key={movie.id}>
+          <h3>{movie.original_title}</h3>
+          <p>{`Release date: ${movie.release_date}`}</p>
+          <Image path={movie.backdrop_path} size="w780" alt={`Cover for ${movie.title}`} />
+        </li>
       ))}
     </ul>
   );
