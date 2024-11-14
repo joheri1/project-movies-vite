@@ -1,4 +1,7 @@
-
+// This component fetches popular movies from the TMDB API using an API key stored in an environment variable (`VITE_REACT_APP_MOVIE_API_KEY`).
+// The API key is accessed via `import.meta.env` to avoid hardcoding it.
+// The component uses the `useState` hook to store the fetched movie list, and `useEffect` to perform the API call only once on component mount.
+// If the request is successful, the movie data is stored in the `movies` state and displayed via the `MovieList` component. Errors during the fetch are logged to the console.
 
 import { useEffect, useState } from "react";
 import MovieList from "../pages/MovieList";
