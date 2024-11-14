@@ -11,7 +11,7 @@
 import { useEffect, useState } from "react";
 import MovieList from "../pages/MovieList";
 
-const ApiFetcher = () => {
+const ApiFetcherToken = () => {
   //useState to store all movies
   const [movies, setMovies] = useState([]);
 
@@ -42,4 +42,4 @@ const ApiFetcher = () => {
   );
 };
 
-export default ApiFetcher;
+export default ApiFetcherToken;
