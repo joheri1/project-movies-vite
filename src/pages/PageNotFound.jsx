@@ -21,7 +21,7 @@ export const PageNotFound = () => {
 
       {/* Link component to navigate back to the home page */}
       {/* The link points to "/go-back-to-home", which is routed to render the Home component */}
-      <Link to="/go-back-to-home">Go Back to Home</Link>
+      <Link to="/">Go Back to Home</Link>
     </div>
   );
 };

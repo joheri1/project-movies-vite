@@ -19,9 +19,6 @@ export const routes = (
     {/* Route to render the Home page */}
     <Route path="/" element={<Home />} />
 
-    {/* Route that also renders the Home component, from the Page not found page*/}
-    <Route path="/back-to-home" element={<Home />} />
-
     {/* Route with "*" that renders the PageNotFound component for unmatched paths */}
     <Route path="*" element={<PageNotFound />} />
     

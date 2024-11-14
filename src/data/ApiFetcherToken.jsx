@@ -31,7 +31,7 @@ const ApiFetcherToken = () => {
       .then(res => res.json())
       .then(data => {
         console.log("Before sorting:", data.results);
-        // Create a new array and sort by rating in descending order
+        // Create a new array and sort by popularity in descending order
         const sortedMovies = [...data.results].sort((a, b) => b.popularity - a.popularity);
         setMovies(sortedMovies); // Store the sorted result in state
         console.log("After sorting by popularity:", sortedMovies);
