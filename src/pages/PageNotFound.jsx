@@ -1,5 +1,9 @@
-// This component displays a "Page Not Found" message when the user navigates to a non-existent route. 
-// It imports Link from react-router-dom to create a navigation link for Go Back to Home.  
+/**
+ * This component displays a "404 - Page Not Found" message when the user navigates to a non-existent route. 
+ * 
+ * It imports Link from react-router-dom to create a navigation link for Go Back to Home.  
+ * 
+ * */
 
 import { Link } from "react-router-dom";
 
@@ -10,7 +14,7 @@ export const PageNotFound = () => {
       <h1>Oh no!</h1>
 
       {/* Subheading to clarify that the page was not found */}
-      <h2>Page not found!</h2>
+      <h2>404 Not Found</h2>
 
       {/* Message explaining the situation to the user */}
       <p>It seems that the page you are trying to access does not exist.</p>

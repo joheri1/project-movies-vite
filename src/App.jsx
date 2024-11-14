@@ -1,13 +1,18 @@
 
-import Home from "./pages/Home"; // Import Home component
+import { BrowserRouter, Routes } from "react-router-dom";
+import appRoutes from "./routes/appRoutes"
 
-export const App = () => {
+const App = () => {
   return (
-  <div>
-    <h1>Popular Movies</h1>
-    <Home />
-  </div>
+    <>
+      <BrowserRouter>
+        <main>
+          <Routes>
+            { appRoutes }
+          </Routes>
+        </main>
+      </BrowserRouter></>
   )
-};
+}
 
 export default App;

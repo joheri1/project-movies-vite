@@ -1,5 +1,5 @@
 import ApiFetcherToken from "../data/ApiFetcherToken" // Import ApiFetcherToken component
-import ApiFetcherKey from "../data/ApiFetcherKey" // Import AApiFetcherKey component
+import ApiFetcherKey from "../data/ApiFetcherKey" // Import ApiFetcherKey component
 
 function Home() {
   return (
