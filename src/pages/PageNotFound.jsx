@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export const PageNotFound = () => {
   return (
-    <div>
+    <div className="page-not-found">
       {/* Main heading for the error message */}
       <h1>Oh no!</h1>
 

@@ -11,11 +11,17 @@ body {
   margin: 0;
   background-color: #1e1200;
   color: #ffffff;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, p {
   font-family: Helvetica, Arial, sans-serif;
   margin: 0;
+}
+
+h1, p {
+  padding: 20px;
 }
 
 img {
@@ -27,12 +33,19 @@ img {
   box-sizing: border-box;
 }
 
+main {
+  padding-top: 60px;
+  padding: 20 0 20 20;
+}
+
 /* ========== Movie card styles ========== */
 .movie-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Default: 4 columns for desktop */
   gap: 20px;
   padding: 20px;
+  margin: 0 auto; 
+  max-width: 100%; 
 }
 
 .movie-card {
@@ -93,6 +106,50 @@ img {
   color: #ccc;
 }
 
+/* ========== Header links ========== */
+
+.header-links {
+  display: flex;
+  align-items: center;  
+  gap: 40px;
+  padding: 20px 20px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  background-color: #1e1200; 
+}
+
+.header-links a {
+  text-decoration: none; 
+  color: #ffffff; 
+  font-size: 18px; 
+  font-weight: bold;
+}
+
+.header-links a:hover {
+  color: #fd6f00; 
+}
+
+/* ========== Page not found ========== */
+
+.page-not-found {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center; 
+  text-align: center; 
+  padding: 20px; 
+  background-color: #1e1200; 
+  color: #ffffff;
+}
+.page-not-found h1,
+.page-not-found h2,
+.page-not-found p,
+.page-not-found a {
+  margin: 20px 0; 
+}
+
 /* ========== Footer section ========== */
 .footer {
   display: flex;
@@ -139,13 +196,24 @@ img {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-}
+  .header-links {
+  justify-content: center;
+  }
+  h1 {
+    text-align: center;
+  }
 
 /* Tablet: 2 columns */
 @media (min-width: 501px) and (max-width: 1024px) {
   .movie-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+  .header-links {
+    justify-content: center;
+  }
+  h1 {
+    text-align: center;
   }
 }
 
@@ -156,4 +224,4 @@ img {
     gap: 20px;
   }
 }
-
+}

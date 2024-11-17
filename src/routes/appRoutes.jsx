@@ -11,13 +11,18 @@
  **/
 
 import { Route } from "react-router-dom";
-import { PageNotFound } from "../pages/PageNotFound";
 import Home from "../pages/Home";
+import MovieInfo from "../pages/MovieInfo";
+import { PageNotFound } from "../pages/PageNotFound";
 
 export const routes = (
   <>
     {/* Route to render the Home page */}
     <Route path="/" element={<Home />} />
+
+    {/* A dynamic route for individual movie pages */}
+    {/* The :movieTitle part is a dynamic parameter that will match the movie title in the URL */} 
+    <Route path="/movie/:movieId" element={<MovieInfo />} />
 
     {/* Route with "*" that renders the PageNotFound component for unmatched paths */}
     <Route path="*" element={<PageNotFound />} />
