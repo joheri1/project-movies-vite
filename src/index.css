@@ -71,12 +71,13 @@ main {
 .movie-art {
   display: block;
   width: 100%;
-  opacity: 1;
+  opacity: 1; /* Fully visible */
   transition: opacity 0.5s ease;
+  z-index: 1;
 }
 
-.movie-art-container:hover {
-  opacity: 0.5; /* Darken image on hover */
+.movie-art-container:hover .movie-art {
+  opacity: 0.5;
 }
 
 .movie-text-container {
@@ -88,15 +89,16 @@ main {
   text-align: center;
   color: #ffffff;
   transition: opacity 0.5s ease;
+  z-index: 2; /* Place text on top of movie-art */
 }
 
 .movie-art-container:hover .movie-text-container {
   opacity: 1; /* Show text on hover */
   color: #ffffff;
-  z-index: 2; /* Position movie text to the front */
 }
 
 .movie-title {
+  padding-top: 20px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -202,18 +204,47 @@ main {
   h1 {
     text-align: center;
   }
+  .movie-art {
+    opacity: 0.5; /* Darker image */
+  }
+  .movie-text-container {
+    opacity: 1; /* Visible text */
+  }
+  .movie-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .movie-release-date {
+    font-size: 14px;
+    color: #ccc;
+  }
+}
 
 /* Tablet: 2 columns */
 @media (min-width: 501px) and (max-width: 1024px) {
-  .movie-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
   .header-links {
     justify-content: center;
   }
   h1 {
     text-align: center;
+  }
+  .movie-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .movie-art {
+    opacity: 0.5; /* Darker image */
+  }
+  .movie-text-container {
+    opacity: 1; /* Visible text */
+  }
+  .movie-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .movie-release-date {
+    font-size: 14px;
+    color: #ccc;
   }
 }
 
@@ -223,5 +254,4 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
-}
 }
