@@ -43,7 +43,8 @@ I spend too much time on the styling (the hover effect that refused to work).
 ### If I had more time
 1. I would fix the movies that have broken images.   
 2. Add more styling to the route for MovieInfo.  
-3. Fix the hover effect by making the movie-text-container text white on hover. 
+3. Fix the hover effect to fully work. 
+4. Split up the styling into different files. 
 
 ### View it live
 [Project Movie Router](https://project-movie-router.netlify.app/)
