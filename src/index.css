@@ -18,10 +18,7 @@ body {
 h1, h2, h3, p {
   font-family: Helvetica, Arial, sans-serif;
   margin: 0;
-}
-
-h1, p {
-  padding: 20px;
+  padding-left: 20px;
 }
 
 img {
@@ -152,6 +149,20 @@ main {
 .page-not-found p,
 .page-not-found a {
   margin: 20px 0; 
+}
+
+/* ========== Move info ========== */
+.movie-info h1,
+.movie-info h2,
+.movie-info h3,
+.movie-info p {
+  margin: 20px 10px; 
+}
+.movie-info h3 {
+color: #fd6f00;
+}
+.movie-info h1 {
+  font-style: italic;
 }
 
 /* ========== Footer section ========== */
