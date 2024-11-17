@@ -21,9 +21,7 @@ export const routes = (
 
     {/* Route with "*" that renders the PageNotFound component for unmatched paths */}
     <Route path="*" element={<PageNotFound />} />
-    
-    {/* A dynamic route for individual movie pages */}
-    {/* The :movieTitle part is a dynamic parameter that will match the movie title in the URL <Route path="/movie/:movie" element={<MovieInfo />} /> */}
+  
   </>
 );
 

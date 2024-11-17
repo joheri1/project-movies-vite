@@ -1,5 +1,5 @@
+/* ========== Global Styles ========== */
 :root {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -7,7 +7,153 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  margin: 0;
+  background-color: #1e1200;
+  color: #ffffff;
 }
+
+h1, h2, h3, p {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ========== Movie card styles ========== */
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 columns for desktop */
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  background-color: #2a1800;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.movie-art-container {
+  position: relative;
+  width: 100%;
+  background-color: #000; 
+}
+
+.movie-art {
+  display: block;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.movie-art-container:hover {
+  opacity: 0.5; /* Darken image on hover */
+}
+
+.movie-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Hidden by default */
+  text-align: center;
+  color: #ffffff;
+  transition: opacity 0.5s ease;
+}
+
+.movie-art-container:hover .movie-text-container {
+  opacity: 1; /* Show text on hover */
+  color: #ffffff;
+  z-index: 2; /* Position movie text to the front */
+}
+
+.movie-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.movie-release-date {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ========== Footer section ========== */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #FFA5A5;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.footer-logo {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ========== Responsive layout ========== */
+
+/* Mobile: 1 column */
+@media (max-width: 500px) {
+  .movie-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 501px) and (max-width: 1024px) {
+  .movie-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 1025px) {
+  .movie-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+

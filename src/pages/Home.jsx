@@ -1,13 +1,16 @@
-import ApiFetcherToken from "../data/ApiFetcherToken" // Import ApiFetcherToken component
-import ApiFetcherKey from "../data/ApiFetcherKey" // Import ApiFetcherKey component
+import ApiFetcherKey from "../data/ApiFetcherKey"; // Import ApiFetcherKey component
+import Footer from "../components/Footer";
+import MovieList from "../pages/MovieList"; // Import MovieList component
 
 function Home() {
   return (
-    <div>
-      <h1>Popular Movies</h1>
-      {/* Use ApiFetcher to fetch and display the list of movies */}
-      <ApiFetcherToken />
-      <ApiFetcherKey />
+    <div className="homepage">
+      <h1>Popular Christmas Movies</h1>
+      <ApiFetcherKey
+        render={(movies) => <MovieList movies={movies} />}
+      />
+      {/* Footer component */}
+      <Footer />
     </div>
   );
 }

@@ -6,7 +6,6 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-      <div>Lets start building our router!</div>
         <nav>
           <ul className="app-ul">
             <li className="app-li">
