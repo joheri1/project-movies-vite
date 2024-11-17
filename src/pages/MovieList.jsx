@@ -29,7 +29,7 @@ const MovieList = ({ movies }) => {
                 <h2 className="movie-title">{movie.original_title}</h2>
                 <p className="movie-release-date">{`Release date: ${movie.release_date}`}</p>
               </div>
-          </div>
+            </div>
           </Link>
         </li>
       ))}

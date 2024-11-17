@@ -1,9 +1,13 @@
 /* eslint-disable */
 
 /** 
- * This component  
+ * This is the Image component, used for rendering images from TMDb.
+ *
+ * It constructs a complete image URL based on the provided `path` 
+ * and `size` props and renders an accessible `<img>` element.
  * 
  */
+
 // Define the Image component using props path and size, and alt text for accessibility.  
 const Image = ({ path, size = "w1280", alt }) => {
 
