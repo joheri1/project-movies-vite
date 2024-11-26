@@ -43,6 +43,7 @@ main {
   padding: 20px;
   margin: 0 auto; 
   max-width: 100%; 
+  align-items: stretch; /* Make all cards equal in height */
 }
 
 .movie-card {
@@ -52,6 +53,10 @@ main {
   position: relative;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  /* Styling to make the text and image fit well together: */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .movie-card:hover {
@@ -60,6 +65,7 @@ main {
 }
 
 .movie-art-container {
+  flex-grow: 1;
   position: relative;
   width: 100%;
   background-color: #000;
@@ -221,17 +227,33 @@ color: #fd6f00;
   h1 {
     text-align: center;
   }
+  .movie-art-container {
+    display: flex;
+    flex-direction: column; /* Add image further back */
+    align-items: center;
+  }
+
   .movie-art {
-    opacity: 0.5; /* Darker image */
+    opacity: 1; /* Fully visible */
+    margin-bottom: 10px; /* Distance between text and image */
   }
+
   .movie-text-container {
-    opacity: 1; /* Visible text */
+    opacity: 1; /* Fully visible */
+    position: static; /* No absolute positioning */
+    background-color: transparent; 
+    color: #ffffff; 
+    text-align: center;
+    margin-bottom: 10px;
   }
+
   .movie-title {
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
+    margin: 5px 0;
   }
+
   .movie-release-date {
     font-size: 14px;
     color: #ccc;
@@ -250,17 +272,43 @@ color: #fd6f00;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000;
+  }
+
+  .movie-art-container {
+    display: flex;
+    flex-direction: column; /* Puts image first and text under it */ 
+    align-items: center;
+  }
+
   .movie-art {
-    opacity: 0.5; /* Darker image */
+    opacity: 1; /* Fully visible */
+    margin-bottom: 20px; 
   }
+
   .movie-text-container {
-    opacity: 1; /* Visible text */
+    opacity: 1; /* Fully visible */
+    position: static; /* No absolute positioning */
+    background-color: transparent; 
+    color: #ffffff; 
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+
   .movie-title {
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
+    margin: 5px 0;
   }
+
   .movie-release-date {
     font-size: 14px;
     color: #ccc;
