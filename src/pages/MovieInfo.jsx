@@ -52,7 +52,7 @@ const MovieInfo = () => {
   }, []); // Only run once
 
   // Display loading state
-  if (loading) <p className="loading-message">Loading movie details...</p>;
+  if (loading) return <p className="loading-message">Loading movie details...</p>;
 
   // Display movie details
   return (

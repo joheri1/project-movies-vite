@@ -35,6 +35,10 @@ main {
   padding: 20 0 20 20;
 }
 
+.loading-message {
+  margin-top: 40px;
+}
+
 /* ========== Movie card styles ========== */
 .movie-container {
   display: grid;
@@ -262,6 +266,9 @@ color: #fd6f00;
     font-size: 14px;
     color: #ccc;
   }
+  .movie-info {
+    text-align: center;
+  }
 }
 
 /* Tablet: 2 columns */
@@ -316,6 +323,10 @@ color: #fd6f00;
   .movie-release-date {
     font-size: 14px;
     color: #ccc;
+  }
+
+  .movie-info {
+    text-align: center;
   }
 }
 
