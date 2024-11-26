@@ -62,9 +62,10 @@ main {
 .movie-art-container {
   position: relative;
   width: 100%;
-  background-color: #000; 
-  transition: opacity 0.5s ease;
+  background-color: #000;
+  transition: opacity 0.5s ease, background-color 0.5s ease;
   z-index: 1;
+  overflow: hidden; /* Prevent that the movie-text-container overflows*/
 }
 
 .movie-art-container:hover .movie-art {
@@ -80,31 +81,33 @@ main {
 
 .movie-text-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0; /* Hidden by default */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0); /* Transparent by default */
+  color: rgba(255, 255, 255, 0); /* Text is unvisible at first */
+  transition: background-color 0.5s ease, color 0.5s ease;
   text-align: center;
-  color: #ffffff;
-  transition: opacity 0.5s ease;
-  z-index: 2; /* Place text on top of movie-art */
 }
 
 .movie-art-container:hover .movie-text-container {
-  opacity: 1; /* Show text on hover */
-  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5); /* Darker bakground */
+  color: rgba(255, 255, 255, 1); /* White text */
 }
 
 .movie-title {
-  padding-top: 20px;
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  margin: 5px 0;
 }
 
 .movie-release-date {
   font-size: 14px;
-  color: #ccc;
 }
 
 /* ========== Header links ========== */
@@ -227,6 +230,7 @@ color: #fd6f00;
   .movie-title {
     font-size: 18px;
     font-weight: bold;
+    color: #ffffff;
   }
   .movie-release-date {
     font-size: 14px;
@@ -255,6 +259,7 @@ color: #fd6f00;
   .movie-title {
     font-size: 18px;
     font-weight: bold;
+    color: #ffffff;
   }
   .movie-release-date {
     font-size: 14px;
