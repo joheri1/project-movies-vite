@@ -15,7 +15,9 @@ import { Link } from "react-router-dom";
 const MovieList = ({ movies }) => {
   return (
     <ul className="movie-container">
-      {movies.map((movie) => (
+      {movies
+        .filter((movie) => movie.backdrop_path) // Only show movies that has an image
+        .map((movie) => (
         <li className="movie-card" key={movie.id}>
           <Link to={`/movie/${movie.id}`}>
             <div className="movie-art-container">
