@@ -40,7 +40,7 @@ const MovieInfo = () => {
         const data = await response.json(); /* Convert API response to JSON */
         setMovieDetails(data); // Set the movie details to state
       } catch (error) {
-          console.log("Error fetching Happy thoughts:", error)
+        console.log("Error fetching Happy thoughts:", error)
       } finally {
         setTimeout(() => {
           setLoading(false) /* Stop loading when posts are fetched after the delay. The delay is to better show the Loading state */
@@ -57,28 +57,48 @@ const MovieInfo = () => {
   // Display movie details
   return (
     <div className="movie-info">
-      <h3>Movie Details</h3>
-      {movieDetails ? (
-        <div>
-          <h1>{movieDetails.title}</h1>
-          <div>
-          <div>
-            <h3>Rating:</h3><p>{movieDetails.vote_average} / 10</p>
+      <div
+        className="movie-info-background"
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path})`,
+        }}
+      ></div>
+      <div className="overlay">
+        {movieDetails ? (
+          <div className="content-wrapper">
+            <div className="poster-frame">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
+                alt={movieDetails.title}
+                className="movie-poster"
+              />
+            </div>
+            <div className="movie-details">
+              <p>
+                <strong>Rating:</strong>  ⭐  {movieDetails.vote_average.toFixed(1)} / 10
+              </p>
+              <h1>{movieDetails.title}</h1>
+              <div>
+                <p>{movieDetails.overview}</p>
+              </div>
+              <div className="movie-details-inline">
+                <p>
+                  <strong>Genres:</strong>{" "}
+                  {movieDetails.genres
+                    ? movieDetails.genres.map((genre) => genre.name).join(", ")
+                    : "No genres available"}
+                </p>
+                <p>
+                  <strong>Release date:</strong> {movieDetails.release_date}
+                </p>
+              </div>
+            </div>
           </div>
-            <h3>Description:</h3><p>{movieDetails.overview}</p>
-          </div>
-          <div>
-            <h3>Genres:</h3><p>{movieDetails.genres.map((genre) => genre.name).join(", ")}</p>
-          </div>
-          <div>
-            <h3>Release Date:</h3><p>{movieDetails.release_date}</p>
-          </div>
-        </div>
-      ) : (
-        <p>No details available for this movie.</p>
-      )}
+        ) : (
+          <p>No details available for this movie.</p>
+        )}
+      </div>
     </div>
   );
-};
-
+}
 export default MovieInfo;
