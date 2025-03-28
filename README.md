@@ -27,24 +27,8 @@ npm run build
 - Styling from [Project Music Releases](https://sp00kify.netlify.app/)
 - Loading state, error handling etc. [Project Happy Thoughts](https://project-happy-thoughts-x.netlify.app/)
 
-### The Problem
-1. Deploying to Netlify.  
-In this project, I stored the API key (and token too at first) used to fetch data from TMDB in a .env file for security reasons, and the file is added to .gitignore to prevent it from being pushed to GitHub. When deploying the app on Netlify, environment variables from .env files are not automatically transferred, so the data from the TMDB database couldn't be fetched. To resolve this, the API token was manually added to Netlify's environment variables under Site Configureation > Environment variables > Environment variables. The API key is available in production without being exposeds in the code.  
-
-2. Default and named exports  
-I mixed them up a few times, and tried to import default exports as named.  
-
-3. Renaming components  
-Initially, I named the appRoutes file as AppRoutes.jsx, assuming it was a React component. Later, I learned that it’s not a component but a JavaScript file so it should follow camelCase naming (appRoutes). When I attempted to rename the file from AppRoutes.jsx to appRoutes.jsx, I encountered issues that I couldn't resolve myself, so I used ChatGPT which suggested a temporarily renaming the file to something entirely different (like RoutesTemp.jsx) before renaming it back to appRoutes.jsx. This solved the issue.  
-
-4. Styling   
-I spend too much time on the styling (the hover effect that refused to work).  
-
 ### If I had more time
-1. I would fix the movies that have broken images.   
-2. Add more styling to the route for MovieInfo.  
-3. Fix the hover effect to fully work. 
-4. Split up the styling into different files. 
+1. Split up the styling into different files. 
 
 ### View it live
 [Project Movie Router](https://project-movie-router.netlify.app/)
