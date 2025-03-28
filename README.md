@@ -6,7 +6,7 @@
 
 # Movie Site Project
 
-This app displays the most popular movies from The Movie Database (TMDB). Data is fetched from the TMDB API (https://developer.themoviedb.org/) to dynamically show popular movies and their details. The site is built with React, using React components to structure the app, and React Router to navigate between different pages.
+This app displays the most popular Christmas movies from The Movie Database (TMDB). Data is fetched from the TMDB API (https://developer.themoviedb.org/) to dynamically show popular movies and their details. The site is built with React, using React components to structure the app, and React Router to navigate between different pages.
 
 ### Dependency Installation & Startup Development Server
 
